@@ -1,0 +1,47 @@
+training:
+  num_workers: 10
+  batch_size: 1024
+  exp_name: ''
+  epochs: 16
+  lr: 0.5
+  weight_decay: 0.00005
+  momentum: 0.9
+  lr_scheduler: cyclic
+  step_size: 30
+  lr_milestones: 20,25
+  lr_peak_epoch: 2
+  gamma: 0.1
+  label_smoothing: 0.0
+  disable_logging: False
+  supercloud: True #False
+  decoder_train: random_resized_crop
+  decoder_val: center_crop_224_256
+  granularity: global
+  eval_epochs: 5
+  # data_root: /mnt/cfs/datasets/transfer_datasets
+  data_root: /home/gridsan/groups/robustness/datasets/ffcv_datasets
+logging:
+  do_if_complete: False
+  mmap_logdir: ""
+model:
+  arch: resnet18
+  pretrained: False
+  checkpoint: "" # override in command
+  transfer: NONE  # Or Null | FIXED | FULL
+resolution:
+  prog_resizing: False # WARNING: have not implemented gaussian embed with resizing...
+  min_res: 160
+  max_res: 192
+  start_ramp: 11
+  end_ramp: 13
+  val_res: 224
+data:
+  dataset: imagenet
+  train_path: torch_imagenet/imagenet_train.beton
+  val_path: torch_imagenet/imagenet_val.beton
+spurious:
+  spurious_perc: 0 # 0: do not embed spurious, 1 always embed spurious
+  spurious_type: gaussian # gaussian or square
+  spurious_file: meta_data/dogs.npy
+  gaussian_pattern_path: meta_data/gaussian_pattern.npy
+  gaussian_scale: 0.01

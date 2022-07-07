@@ -1,0 +1,42 @@
+training:
+  num_workers: 10
+  batch_size: 1024
+  exp_name: ''
+  epochs: 15
+  lr: 0.1
+  weight_decay: 0.01 
+  momentum: 0.9
+  lr_scheduler: cyclic
+  step_size: 10
+  lr_milestones: ""
+  lr_peak_epoch: 5
+  gamma: 0.1
+  label_smoothing: 0.0
+  disable_logging: False
+  supercloud: True #False
+  decoder_train: center_crop_1
+  decoder_val: center_crop_1
+  granularity: global
+  data_root: /mnt/cfs/datasets/transfer_datasets
+logging:
+  do_if_complete: False
+  mmap_logdir: ""
+model:
+  arch: resnet18
+  pretrained: False
+  checkpoint: "" # override in command
+  transfer: NONE # Or NONE | FIXED | FULL
+resolution:
+  prog_resizing: False
+  val_res: 224
+data:
+  dataset: cifar10
+  train_path: cifar10/cifar10_train.beton
+  val_path: cifar10/cifar10_test.beton
+spurious:
+  spurious_perc: 0 # do not embed spurious
+  spurious_type: gaussian # gaussian or square
+  spurious_file: meta_data/cifar_uniform.npy
+  gaussian_pattern_path: meta_data/gaussian_pattern.npy
+  gaussian_scale: 0.01
+
