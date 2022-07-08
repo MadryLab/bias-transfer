@@ -3,7 +3,9 @@
 This repository contains the code of our paper:
 
 **When Does Bias Transfer in Transfer Learning?** </br>
-*Hadi Salman\*, Saachi Jain\*, Andrew Ilyas\*, Logan Engstrom\*, Eric Wong, Aleksander Madry*
+*Hadi Salman\*, Saachi Jain\*, Andrew Ilyas\*, Logan Engstrom\*, Eric Wong, Aleksander Madry*  <br>
+[Paper](https://arxiv.org/abs/2207.02842) - [Blog post](http://gradientscience.org/bias-transfer/)
+
 
 ```bibtex
 @InProceedings{salman2022does,
@@ -15,7 +17,7 @@ This repository contains the code of our paper:
 ```
 
 <p>
-<img src="corr_errs_pic.jpg" width="700" >
+<img src="BiasTransfer.png" width="1000" >
 </p>
 
 The major components of our repo are:
