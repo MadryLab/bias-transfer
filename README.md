@@ -14,6 +14,10 @@ This repository contains the code of our paper:
 }
 ```
 
+<p>
+<img src="corr_errs_pic.jpg" width="700" >
+</p>
+
 The major components of our repo are:
 
 * [main.py](main.py): Entry point of our codebase.
