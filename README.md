@@ -8,11 +8,11 @@ This repository contains the code of our paper:
 
 
 ```bibtex
-@InProceedings{salman2022does,
-    title={When Does Bias Transfer in Transfer Learning?},
-    author={Hadi Salman and Saachi Jain and Andrew Ilyas and Logan Engstrom and Eric Wong and Aleksander Madry},
-    year={2022},
-    booktitle={ArXiv preprint arXiv:2207.02842}
+@article{salman2022does,
+  title={When does Bias Transfer in Transfer Learning?},
+  author={Salman, Hadi and Jain, Saachi and Ilyas, Andrew and Engstrom, Logan and Wong, Eric and Madry, Aleksander},
+  journal={arXiv preprint arXiv:2207.02842},
+  year={2022}
 }
 ```
 
